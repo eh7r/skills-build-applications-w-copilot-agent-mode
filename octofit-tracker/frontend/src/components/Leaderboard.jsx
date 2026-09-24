@@ -8,6 +8,7 @@ function Leaderboard() {
   const [error, setError] = useState('')
 
   useEffect(() => {
+    // Codespaces endpoint: https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/leaderboard/
     fetchCollection('leaderboard')
       .then(setLeaders)
       .catch((requestError) => setError(requestError.message))

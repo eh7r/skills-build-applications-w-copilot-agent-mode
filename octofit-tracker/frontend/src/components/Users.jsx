@@ -8,6 +8,7 @@ function Users() {
   const [error, setError] = useState('')
 
   useEffect(() => {
+    // Codespaces endpoint: https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/users/
     fetchCollection('users')
       .then(setUsers)
       .catch((requestError) => setError(requestError.message))

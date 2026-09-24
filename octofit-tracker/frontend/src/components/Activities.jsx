@@ -8,6 +8,7 @@ function Activities() {
   const [error, setError] = useState('')
 
   useEffect(() => {
+    // Codespaces endpoint: https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/activities/
     fetchCollection('activities')
       .then(setActivities)
       .catch((requestError) => setError(requestError.message))
